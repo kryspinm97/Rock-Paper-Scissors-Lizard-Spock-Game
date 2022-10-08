@@ -29,6 +29,7 @@ h1 {
   justify-content: center;
   padding: 20px;
 }
+
 .info p {
   width: 50%;
   font-size: 1rem;
@@ -102,13 +103,8 @@ h1 {
   color: blue;
 }
 
-.player-area h2,p {
-  color: black;
-  margin: 10px;
-}
-
 .player-area {
-  display:flex;
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -118,14 +114,14 @@ h1 {
   background: white;
 }
 
-.computer-area h2,p {
-  color:black;
+.player-area h2,
+p {
+  color: black;
   margin: 10px;
-  font-size: 1.5rem;
 }
 
 .computer-area {
-  display:flex;
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -133,11 +129,20 @@ h1 {
   height: 150px;
   width: 250px;
 
-  background:white;
+  background: white;
 }
+
+.computer-area h2,
+p {
+  color: black;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
 
 .center-area {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 200px;
 }
@@ -150,7 +155,7 @@ h1 {
   background: url(/assets/images/Background.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%; 
+  height: 100%;
 }
 
 .game-buttons {
