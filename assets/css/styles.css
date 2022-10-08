@@ -7,10 +7,7 @@
 }
 
 html {
-  background: url(/assets/images/Background.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%; 
+  height: 100%;
 }
 
 body {
@@ -20,30 +17,10 @@ body {
 
 h1 {
   color: white;
-  margin: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-h2 {
-  color: white;
-}
-
-button {
-  border-radius: 100px;
-  border: 5px solid white;
-  cursor: pointer;
-  box-shadow: 0 9px #999;
-}
-
-button:hover {
-  color: orange;
-  border: 5px solid orange;
-}
-
-p {
-  color: white;
 }
 
 .info {
@@ -51,10 +28,13 @@ p {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-size: 20px;
 }
 .info p {
   width: 50%;
+  font-size: 1rem;
+  text-align: center;
+  padding: 35px;
+  color: white;
 }
 
 .btn-grey:hover {
@@ -67,8 +47,8 @@ p {
 }
 
 .btn-green:hover {
-  border: 5px solid green;
-  color: green;
+  border: 5px solid limegreen;
+  color: limegreen;
 }
 
 .btn-green:active {
@@ -102,31 +82,75 @@ p {
   transform: translateY(4px);
 }
 
+.fa-hand-back-fist {
+  color: grey;
+}
+
+.fa-hand {
+  color: orange;
+}
+
+.fa-hand-scissors {
+  color: red;
+}
+
+.fa-hand-lizard {
+  color: limegreen;
+}
+
+.fa-hand-spock {
+  color: blue;
+}
+
+.player-area h2,p {
+  color: black;
+  margin: 10px;
+}
 
 .player-area {
   display:flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 25px;
+  height: 150px;
+  width: 250px;
+  background: white;
+}
 
+.computer-area h2,p {
+  color:black;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .computer-area {
-  display: flex;
+  display:flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 25px;
+  height: 150px;
+  width: 250px;
 
+  background:white;
 }
 
 .center-area {
-  height: 350px;
   display: flex;
   justify-content: center;
-  margin: 50px;
-  position: relative;
-  top: 50px;
   gap: 200px;
 }
 
 .center-area img {
   border-radius: 50px;
+}
+
+.game-background {
+  background: url(/assets/images/Background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%; 
 }
 
 .game-buttons {
@@ -146,6 +170,10 @@ p {
 }
 
 .game-buttons button {
+  border-radius: 100px;
+  border: 5px solid white;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
   margin: 0 10px;
 }
 
