@@ -139,12 +139,33 @@ p {
   font-size: 1.5rem;
 }
 
+.result-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+}
+
+.result-message span {
+  display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+border-radius: 25px;
+font-size: 30px;
+height: 50px;
+width: 350px;
+}
+
 
 .center-area {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 200px;
+  margin: 50px;
 }
 
 .center-area img {

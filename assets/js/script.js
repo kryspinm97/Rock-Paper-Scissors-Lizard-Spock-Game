@@ -1,6 +1,9 @@
 let playerScore = document.getElementById('playerScore');
 let computerScore = document.getElementById('computerScore');
-
+let resultMessage = document.getElementById('rsltMsg');
+/**
+ * array to hold all picks in the game
+ */
 let picks = [{
     "id": "Rock"
   },
@@ -18,9 +21,15 @@ let picks = [{
   }
 ];
 
+/**
+ * variables to keep track of user and computer score
+ */
 let pScore = 0;
 let cScore = 0;
 
+/**
+ * variables to keep track of user and computer score
+ */
 let gameRules = {
   Rock: ["Lizard", "Scissor"],
   Paper: ["Rock", "Spock"],
@@ -29,38 +38,46 @@ let gameRules = {
   Spock: ["Scissors", "Rock"],
 };
 
-let btn0 = document.getElementById("btn0");
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissor = document.getElementById("scissor");
+let lizard = document.getElementById("lizard");
+let spock = document.getElementById("spock");
 
-btn0.addEventListener('click', event => {
+rock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
   console.log(compPick);
   gameResult(0, compPick);
 });
-btn1.addEventListener('click', event => {
+
+paper.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
   console.log(compPick);
   gameResult(1, compPick);
 });
-btn2.addEventListener('click', event => {
+
+scissor.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
   console.log(compPick);
   gameResult(2, compPick);
 });
-btn3.addEventListener('click', event => {
+
+lizard.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
   console.log(compPick);
   gameResult(3, compPick);
 });
-btn4.addEventListener('click', event => {
+
+spock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
   console.log(compPick);
   gameResult(4, compPick);
 });
 
+/**
+ * Function to run game
+ * takes in player pick and computer pick as numeric variables
+ */
 function gameResult(player1, Comp) {
 
   const playerPick = picks[player1].id;
@@ -70,15 +87,14 @@ function gameResult(player1, Comp) {
   const playerRulePick = gameRules[playerPick];
 
   if (playerPick === compPick) {
-    alert("Draw");
+    resultMessage.innerHTML = ("It's a draw!");
   } else if (playerRulePick.includes(compPick)) {
-    alert("Player wins");
+    resultMessage.innerHTML = ("You win !");
     pScore++;
   } else {
-    alert("Computer wins")
+    resultMessage.innerHTML = ("Computer wins!");
     cScore++;
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;
   document.getElementById("computerScore").innerHTML = `${cScore}`;
-
 };
