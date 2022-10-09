@@ -1,5 +1,4 @@
-let playerScore = document.getElementById('playerScore');
-let computerScore = document.getElementById('computerScore');
+
 let resultMessage = document.getElementById('rsltMsg');
 /**
  * array to hold all picks in the game
@@ -38,11 +37,11 @@ let gameRules = {
   Spock: ["Scissors", "Rock"],
 };
 
-let rock = document.getElementById("rock");
-let paper = document.getElementById("paper");
-let scissor = document.getElementById("scissor");
-let lizard = document.getElementById("lizard");
-let spock = document.getElementById("spock");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissor = document.getElementById("scissor");
+const lizard = document.getElementById("lizard");
+const spock = document.getElementById("spock");
 
 rock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
@@ -52,25 +51,21 @@ rock.addEventListener('click', event => {
 
 paper.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(1, compPick);
 });
 
 scissor.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(2, compPick);
 });
 
 lizard.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(3, compPick);
 });
 
 spock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(4, compPick);
 });
 
@@ -89,10 +84,10 @@ function gameResult(player1, Comp) {
   if (playerPick === compPick) {
     resultMessage.innerHTML = ("It's a draw!");
   } else if (playerRulePick.includes(compPick)) {
-    resultMessage.innerHTML = ("You win !");
+    resultMessage.innerHTML = (`You win! ${playerPick} beats ${compPick} !`);
     pScore++;
   } else {
-    resultMessage.innerHTML = ("Computer wins!");
+    resultMessage.innerHTML = (`Computer wins by choosing ${compPick}`);
     cScore++;
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;

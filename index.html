@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<div class="game-background">
   <h1 class="heading"> Rock, Paper Scissors, Lizard and Spock !</h1>
 
   <div class="game-buttons">
@@ -21,7 +20,7 @@
   </div> 
 
   <div class="info">
-    <p>Take a chance at a Rock,Paper,Scissors,Lizard and Spock Game by playing against the computer
+    <p>Take a chance at a Rock, Paper, Scissors, Lizard and Spock Game by playing against the computer
        in a best of 10 while keeping track of your score!
     </p>
   </div>
@@ -35,21 +34,24 @@
         <div class="player-area">
            <div>
             <h2>You</h2>
-            <p>Score : <span id="playerScore">0</span></p>
+            
           </div>
         </div>
-              <img src="/assets/images/GameRules.jpg">
+        <span id="playerScore">0</span>
+        <span>:</span>
+        <span id="computerScore">0</span>
         <div class="computer-area" >
             <div>
-              <h2>Computer</h2>
-              <p>Score : <span id="computerScore">0</span></p>
+              <h2>Com</h2>
             </div>
         </div>
   </div>
 
+  <div class="game-rules-img">
+    <img src="/assets/images/GameRules.jpg">
+  </div>
 
-</div>
- 
+
 
   <script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
