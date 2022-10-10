@@ -1,34 +1,20 @@
-
-let resultMessage = document.getElementById('rsltMsg');
-/**
- * array to hold all picks in the game
- */
 let picks = [{
-    "id": "Rock"
-  },
-  {
-    "id": "Paper"
-  },
-  {
-    "id": "Scissors"
-  },
-  {
-    "id": "Lizard"
-  },
-  {
-    "id": "Spock"
-  }
+  "id": "Rock"
+},
+{
+  "id": "Paper"
+},
+{
+  "id": "Scissors"
+},
+{
+  "id": "Lizard"
+},
+{
+  "id": "Spock"
+}
 ];
 
-/**
- * variables to keep track of user and computer score
- */
-let pScore = 0;
-let cScore = 0;
-
-/**
- * variables to keep track of user and computer score
- */
 let gameRules = {
   Rock: ["Lizard", "Scissor"],
   Paper: ["Rock", "Spock"],
@@ -37,11 +23,41 @@ let gameRules = {
   Spock: ["Scissors", "Rock"],
 };
 
+let resultMessage = document.getElementById('rsltMsg');
+let btnReset = document.getElementById("reset");
+let btnPlay = document.getElementById("play");
+
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissor = document.getElementById("scissor");
 const lizard = document.getElementById("lizard");
 const spock = document.getElementById("spock");
+
+let pScore = 0;
+let cScore = 0;
+
+/* Game buttons are disabled by default until the Play button is pressed */
+
+document.getElementById("rock").disabled = true;
+document.getElementById("paper").disabled = true;
+document.getElementById("scissor").disabled = true;
+document.getElementById("lizard").disabled = true;
+document.getElementById("spock").disabled = true;
+
+btnPlay.addEventListener('click', event => {
+document.getElementById("rock").disabled = false;
+document.getElementById("paper").disabled = false;
+document.getElementById("scissor").disabled = false;
+document.getElementById("lizard").disabled = false;
+document.getElementById("spock").disabled = false;
+gameResult(player1,compPick);
+})
+
+/* Game buttons are disabled by default until the Play button is pressed */
+
+btnReset.addEventListener('click', event => {
+  document.location.reload(true);
+});
 
 rock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
@@ -92,4 +108,18 @@ function gameResult(player1, Comp) {
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;
   document.getElementById("computerScore").innerHTML = `${cScore}`;
+  bestOfTen();
 };
+
+
+function bestOfTen (player1, comp) {
+
+  if(pScore === 10) {
+    alert("You have won the game! Press play to play again!");
+    document.location.reload(true);
+  } else if (cScore === 10) {
+    alert("You have lost the game! Press play to try again!");
+    document.location.reload(true);
+  }
+
+}

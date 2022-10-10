@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,50 @@
   <title>Rock,Paper,Scissors, Lizard and Spock</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
 
-  <h1 class="heading"> Rock, Paper Scissors, Lizard and Spock !</h1>
-
-  <div class="game-buttons">
-      <button id ="rock" class="btn-grey"><i class="fa-regular fa-hand-back-fist" ></i><span>Rock</span></button>
-      <button id ="paper" class="btn-orange"><i class="fa-regular fa-hand"></i><span>Paper</span></button>
-      <button id ="scissor" class="btn-red"><i class="fa-regular fa-hand-scissors"></i><span>Scissors</span></button>
-      <button id ="lizard" class="btn-green"><i class="fa-regular fa-hand-lizard"></i><span>Lizard</span></button>
-      <button id ="spock" class="btn-blue"><i class="fa-regular fa-hand-spock"></i><span>Spock</span></button>
-  </div> 
+  <h1 class="heading"> Rock, Paper, Scissors, Lizard and Spock !</h1>
 
   <div class="info">
     <p>Take a chance at a Rock, Paper, Scissors, Lizard and Spock Game by playing against the computer
-       in a best of 10 while keeping track of your score!
+      in a best of 10 while keeping track of your score!
     </p>
+  </div>
+
+  <div class="game-buttons">
+    <button id="rock" class="btn-grey"><i class="fa-regular fa-hand-back-fist"></i><span>Rock</span></button>
+    <button id="paper" class="btn-orange"><i class="fa-regular fa-hand"></i><span>Paper</span></button>
+    <button id="scissor" class="btn-red"><i class="fa-regular fa-hand-scissors"></i><span>Scissors</span></button>
+    <button id="lizard" class="btn-green"><i class="fa-regular fa-hand-lizard"></i><span>Lizard</span></button>
+    <button id="spock" class="btn-blue"><i class="fa-regular fa-hand-spock"></i><span>Spock</span></button>
+  </div>
+
+
+  <div class="play-btn">
+    <button id="play">Play</button>
+    <button id="rules">Rules</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <div class="center-area">
+    <div class="player-area">
+      <div>
+        <h2>You</h2>
+      </div>
+    </div>
+    <span id="playerScore">0</span>
+    <span>:</span>
+    <span id="computerScore">0</span>
+    <div class="computer-area">
+      <div>
+        <h2>Com</h2>
+      </div>
+    </div>
   </div>
 
   <div class="result-message">
     <span id="rsltMsg"></span>
-  </div>
-
-
-  <div class="center-area">
-        <div class="player-area">
-           <div>
-            <h2>You</h2>
-            
-          </div>
-        </div>
-        <span id="playerScore">0</span>
-        <span>:</span>
-        <span id="computerScore">0</span>
-        <div class="computer-area" >
-            <div>
-              <h2>Com</h2>
-            </div>
-        </div>
   </div>
 
   <div class="game-rules-img">
@@ -56,4 +63,5 @@
   <script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

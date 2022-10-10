@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +64,7 @@ h1 {
   background-color: white;
   border: 5px solid white;
   box-shadow: 0 9px #999;
-
+  transition: 0.1s ease;
   border-radius: 100px;
   cursor: pointer;
   margin: 10px 20px;
@@ -82,7 +83,7 @@ h1 {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 50px;
+  height: 500px;
 }
 
 .game-rules-img img {
@@ -160,7 +161,6 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-
   color: white;
 }
 
@@ -199,6 +199,7 @@ h1 {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
+  box-shadow: 0 0 22px Green;
   background: white;
   width: 100px;
   height: 100px;
@@ -217,7 +218,7 @@ p {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
-
+  box-shadow: 0 0 22px red;
   width: 100px;
   height: 100px;
   background: white;
@@ -231,11 +232,42 @@ p {
   font-size: 1.5rem;
 }
 
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px;
+  height: 150px;
+}
+
+.play-btn button {
+  font-size: 22px;
+  text-transform: uppercase;
+  width: 80px;
+  height: 80px;
+  border-radius: 25px;
+  margin: 10px 5px;
+  background-color: white;
+  border-style: none;
+}
+
+.play-btn button:hover {
+  background-color: orange;
+  outline: 0.5px solid orange;
+  transition: 0.1s ease;
+  color: white;
+  font-size: 24px;
+}
+
+.play-btn button:active {
+  transform: translateY(4px);
+}
 
 @media screen and (max-width: 414px) {
+
   .game-buttons i {
     font-size: 2rem;
     margin: 20px 30px;
   }
-  
+
 }
