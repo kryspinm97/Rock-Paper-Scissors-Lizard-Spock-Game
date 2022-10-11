@@ -1,18 +1,9 @@
-let picks = [{
-  "id": "Rock"
-},
-{
-  "id": "Paper"
-},
-{
-  "id": "Scissors"
-},
-{
-  "id": "Lizard"
-},
-{
-  "id": "Spock"
-}
+let picks = [
+  {"id": "Rock" },
+  {"id": "Paper"},
+  {"id": "Scissors"},
+  {"id": "Lizard"},
+  {"id": "Spock"}
 ];
 
 let gameRules = {
@@ -45,12 +36,11 @@ document.getElementById("lizard").disabled = true;
 document.getElementById("spock").disabled = true;
 
 btnPlay.addEventListener('click', event => {
-document.getElementById("rock").disabled = false;
-document.getElementById("paper").disabled = false;
-document.getElementById("scissor").disabled = false;
-document.getElementById("lizard").disabled = false;
-document.getElementById("spock").disabled = false;
-gameResult(player1,compPick);
+  document.getElementById("rock").disabled = false;
+  document.getElementById("paper").disabled = false;
+  document.getElementById("scissor").disabled = false;
+  document.getElementById("lizard").disabled = false;
+  document.getElementById("spock").disabled = false;
 })
 
 /* Game buttons are disabled by default until the Play button is pressed */
@@ -100,10 +90,10 @@ function gameResult(player1, Comp) {
   if (playerPick === compPick) {
     resultMessage.innerHTML = ("It's a draw!");
   } else if (playerRulePick.includes(compPick)) {
-    resultMessage.innerHTML = (`You win! ${playerPick} beats ${compPick} !`);
+    resultMessage.innerHTML = (`You win! <br> You picked ${playerPick}. <br> Computer picked ${compPick}.`);
     pScore++;
   } else {
-    resultMessage.innerHTML = (`Computer wins by choosing ${compPick}`);
+    resultMessage.innerHTML = (`Computer wins! <br>  You picked ${playerPick}. <br> Computer picked ${compPick}.`);
     cScore++;
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;
@@ -112,13 +102,13 @@ function gameResult(player1, Comp) {
 };
 
 
-function bestOfTen (player1, comp) {
+function bestOfTen(player1, comp) {
 
-  if(pScore === 10) {
-    alert("You have won the game! Press play to play again!");
+  if (pScore === 10) {
+    alert("You have won the game! Press OK to play again!");
     document.location.reload(true);
   } else if (cScore === 10) {
-    alert("You have lost the game! Press play to try again!");
+    alert("You have lost the game! Press OK to try again!");
     document.location.reload(true);
   }
 

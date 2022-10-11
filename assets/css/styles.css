@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 * {
   margin: 0;
@@ -6,40 +7,40 @@
   box-sizing: border-box;
 }
 
-html {
-  min-height: 100vh;
-}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
   width: 100%;
+  min-height: 100vh;
   height: auto;
-
-  background: url(/assets/images/Background.webp) no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color:#393f4d;
 }
 
-h1 {
-  color: white;
+header {
+  font-size: 35px;
+  color: black;
   padding: 20px;
   display: flex;
+  text-align: center;
   flex-direction: row;
   justify-content: center;
 }
 
+#heading {
+  background-color: #edf0f1;
+}
+
 .info {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .info p {
-  width: 80%;
+  width: 50%;
   font-size: 1.3rem;
   text-align: center;
-  padding: 35px;
   color: white;
 }
 
@@ -67,11 +68,12 @@ h1 {
   transition: 0.1s ease;
   border-radius: 100px;
   cursor: pointer;
-  margin: 10px 20px;
+  margin: 10px 10px;
 }
 
 .game-buttons span {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 1.3rem;
   position: relative;
@@ -92,6 +94,7 @@ h1 {
 
 .btn-grey:hover {
   border: 5px solid grey;
+  box-shadow: 0 10px 10px grey;
   color: grey;
 }
 
@@ -99,8 +102,10 @@ h1 {
   transform: translateY(4px);
 }
 
+
 .btn-green:hover {
   border: 5px solid limegreen;
+  box-shadow: 0 10px 10px limegreen;
   color: limegreen;
 }
 
@@ -109,8 +114,9 @@ h1 {
 }
 
 .btn-blue:hover {
-  border: 5px solid blue;
-  color: blue;
+  border: 5px solid lightskyblue;
+  box-shadow: 0 10px 10px lightskyblue;
+  color: lightskyblue;
 }
 
 .btn-blue:active {
@@ -119,6 +125,7 @@ h1 {
 
 .btn-red:hover {
   border: 5px solid red;
+  box-shadow: 0 10px 10px red;
   color: red;
 }
 
@@ -128,6 +135,7 @@ h1 {
 
 .btn-orange:hover {
   border: 5px solid orange;
+  box-shadow: 0 10px 10px orange;
   color: orange;
 }
 
@@ -152,9 +160,8 @@ h1 {
 }
 
 .fa-hand-spock {
-  color: blue;
+  color: lightskyblue;
 }
-
 
 .result-message {
   display: flex;
@@ -162,6 +169,8 @@ h1 {
   align-items: center;
   text-align: center;
   color: white;
+  height: 150px;
+  padding: 50px 0 0 0;
 }
 
 .result-message span {
@@ -180,8 +189,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 0 40px 0;
   gap: 20px;
-  margin: 50px;
 }
 
 .center-area img {
@@ -199,14 +208,13 @@ h1 {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
-  box-shadow: 0 0 22px Green;
+  box-shadow: 0 0 10px Green;
   background: white;
   width: 100px;
   height: 100px;
 }
 
-.player-area h2,
-p {
+.player-area h2 {
   color: black;
   margin: 10px;
   text-transform: uppercase;
@@ -218,7 +226,7 @@ p {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
-  box-shadow: 0 0 22px red;
+  box-shadow: 0 0 10px red;
   width: 100px;
   height: 100px;
   background: white;
@@ -232,26 +240,28 @@ p {
   font-size: 1.5rem;
 }
 
-.play-btn {
+.opt-btn-pos {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  margin: 20px 20px;
-  height: 150px;
+  align-items: center;
+  margin: 30px;
 }
 
-.play-btn button {
+.option-buttons {
+  height: 150px;
+  font-family:inherit;
   font-size: 22px;
   text-transform: uppercase;
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 50px;
   border-radius: 25px;
-  margin: 10px 5px;
+  margin: 5px;
   background-color: white;
   border-style: none;
 }
 
-.play-btn button:hover {
+.option-buttons:hover {
   background-color: orange;
   outline: 0.5px solid orange;
   transition: 0.1s ease;
@@ -259,15 +269,78 @@ p {
   font-size: 24px;
 }
 
-.play-btn button:active {
+.option-buttons:active {
   transform: translateY(4px);
 }
 
-@media screen and (max-width: 414px) {
+.game-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  border-radius: 50px;
+  width: 600px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: #24252a;
+}
 
-  .game-buttons i {
-    font-size: 2rem;
-    margin: 20px 30px;
+.rules-area {
+  height: 300px;
+  width: 300px;
+}
+
+.fa {
+  padding: 20px;
+  margin: 0 10px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.abs-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+@media screen and (max-width: 600px) {
+  .game-container {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .game-buttons button {
+    margin: 10px 10px;
   }
 
 }
+
+@media screen and (max-width: )

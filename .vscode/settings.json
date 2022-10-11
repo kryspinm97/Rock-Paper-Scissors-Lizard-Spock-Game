@@ -21,7 +21,8 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+   "workbench.colorTheme": "Ayu Mirage",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "liveServer.settings.port": 5501
 }
