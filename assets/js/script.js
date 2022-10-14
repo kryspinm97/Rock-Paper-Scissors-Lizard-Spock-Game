@@ -16,7 +16,7 @@ let picks = [{
 ];
 
 let gameRules = {
-  Rock: ["Lizard", "Scissor"],
+  Rock: ["Lizard", "Scissors"],
   Paper: ["Rock", "Spock"],
   Scissors: ["Paper", "Lizard"],
   Lizard: ["Spock", "Paper"],
@@ -68,6 +68,7 @@ rock.addEventListener('click', event => {
 
 paper.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
+  console.log(compPick);
   gameResult(1, compPick);
 });
 
@@ -115,6 +116,8 @@ function gameResult(player1, Comp) {
   pickPlayer.innerHTML = (`You picked ${playerPick}`);
   pickCom.innerHTML = (`Com picked ${compPick}`);
   bestOfTen();
+
+
 };
 
 

@@ -16,7 +16,6 @@ body {
     45deg,
     #4B79A1,
     #283E51
-  
   );
 }
 
@@ -211,6 +210,7 @@ header {
 
 .center-area {
   display: flex;
+  flex-wrap: row wrap;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -325,3 +325,30 @@ p {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .game-buttons i {
+  font-size: 3em;
+  display: flex;
+  margin: 3px 3px;
+  }
+
+  .game-buttons span {
+    display: none;
+  }
+
+  #playerPickChoice {
+   display:flex;
+   position: relative;
+   top: 0;
+  }
+
+  #comPickChoice {
+    display:flex;
+    position: relative;
+    top: 0;
+  }
+
+  .player-area , .computer-area {
+    height: 120px;
+  }
