@@ -352,3 +352,9 @@ p {
   .player-area , .computer-area {
     height: 120px;
   }
+
+  .btn-blue:hover {
+    border: 5px solid grey;
+  }
+
+}
