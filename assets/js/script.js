@@ -1,9 +1,18 @@
-let picks = [
-  {"id": "Rock" },
-  {"id": "Paper"},
-  {"id": "Scissors"},
-  {"id": "Lizard"},
-  {"id": "Spock"}
+let picks = [{
+    "id": "Rock"
+  },
+  {
+    "id": "Paper"
+  },
+  {
+    "id": "Scissors"
+  },
+  {
+    "id": "Lizard"
+  },
+  {
+    "id": "Spock"
+  }
 ];
 
 let gameRules = {
@@ -17,6 +26,8 @@ let gameRules = {
 let resultMessage = document.getElementById('rsltMsg');
 let btnReset = document.getElementById("reset");
 let btnPlay = document.getElementById("play");
+let pickPlayer = document.getElementById('playerPickChoice')
+let pickCom = document.getElementById('comPickChoice')
 
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
@@ -88,16 +99,21 @@ function gameResult(player1, Comp) {
   const playerRulePick = gameRules[playerPick];
 
   if (playerPick === compPick) {
+    resultMessage.style.cssText="background-color: #e5e5e5; color: #808080";
     resultMessage.innerHTML = ("It's a draw!");
   } else if (playerRulePick.includes(compPick)) {
-    resultMessage.innerHTML = (`You win! <br> You picked ${playerPick}. <br> Computer picked ${compPick}.`);
+    resultMessage.style.cssText="background-color: #cefdce; color: #689f38";
+    resultMessage.innerHTML = (`You win!`);
     pScore++;
   } else {
-    resultMessage.innerHTML = (`Computer wins! <br>  You picked ${playerPick}. <br> Computer picked ${compPick}.`);
+    resultMessage.style.cssText="background-color: #ffdde0; color: #d32f2f";
+    resultMessage.innerHTML = (`Computer wins!`);
     cScore++;
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;
   document.getElementById("computerScore").innerHTML = `${cScore}`;
+  pickPlayer.innerHTML = (`You picked ${playerPick}`);
+  pickCom.innerHTML = (`Com picked ${compPick}`);
   bestOfTen();
 };
 

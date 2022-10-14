@@ -7,27 +7,53 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Questrial', sans-serif;
-  width: 100%;
   min-height: 100vh;
-  height: auto;
-  background-color:#393f4d;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    45deg,
+    #4B79A1,
+    #283E51
+  
+  );
+}
+
+#heading header {
+  color:#edf0f1;
+}
+
+#playerScore {
+  color: limegreen;
+}
+
+#computerScore {
+  color: red;
+}
+
+#playerPickChoice {
+  display:flex;
+  position:relative;
+  top: 20px;
+}
+
+#comPickChoice {
+  display:flex;
+  position:relative;
+  top: 20px;
 }
 
 header {
   font-size: 35px;
-  color: black;
+  color: #4f4f51;
+  text-transform: uppercase;
+  font-weight: 700;
   padding: 20px;
   display: flex;
   text-align: center;
   flex-direction: row;
   justify-content: center;
-}
-
-#heading {
-  background-color: #edf0f1;
 }
 
 .info {
@@ -58,15 +84,14 @@ header {
   font-size: 3.5em;
   display: flex;
   margin: 40px 50px;
-
 }
 
 .game-buttons button {
-  background-color: white;
-  border: 5px solid white;
-  box-shadow: 0 9px #999;
+  background-color: #d6d6d6;
+  border: 5px solid #d6d6d6;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
   transition: 0.1s ease;
-  border-radius: 100px;
+  border-radius: 15px;
   cursor: pointer;
   margin: 10px 10px;
 }
@@ -77,7 +102,7 @@ header {
   text-transform: uppercase;
   font-size: 1.3rem;
   position: relative;
-  bottom: 30px;
+  bottom: 15px;
 }
 
 .game-rules-img {
@@ -93,8 +118,8 @@ header {
 }
 
 .btn-grey:hover {
-  border: 5px solid grey;
-  box-shadow: 0 10px 10px grey;
+  border: 2px solid grey;
+  box-shadow: 0 5px 5px grey;
   color: grey;
 }
 
@@ -104,8 +129,8 @@ header {
 
 
 .btn-green:hover {
-  border: 5px solid limegreen;
-  box-shadow: 0 10px 10px limegreen;
+  border: 2px solid limegreen;
+  box-shadow: 0 5px 5px limegreen;
   color: limegreen;
 }
 
@@ -114,8 +139,8 @@ header {
 }
 
 .btn-blue:hover {
-  border: 5px solid lightskyblue;
-  box-shadow: 0 10px 10px lightskyblue;
+  border: 2px solid lightskyblue;
+  box-shadow: 0 5px 5px lightskyblue;
   color: lightskyblue;
 }
 
@@ -124,8 +149,8 @@ header {
 }
 
 .btn-red:hover {
-  border: 5px solid red;
-  box-shadow: 0 10px 10px red;
+  border: 2px solid red;
+  box-shadow: 0 5px 5px red;
   color: red;
 }
 
@@ -134,8 +159,8 @@ header {
 }
 
 .btn-orange:hover {
-  border: 5px solid orange;
-  box-shadow: 0 10px 10px orange;
+  border: 2px solid orange;
+  box-shadow: 0 5px 5px orange;
   color: orange;
 }
 
@@ -163,25 +188,24 @@ header {
   color: lightskyblue;
 }
 
-.result-message {
+#resultMessage {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
-  height: 150px;
-  padding: 50px 0 0 0;
+  padding: 10px 10px 50px;
+  margin: 0 auto;
 }
 
-.result-message span {
+#resultMessage span {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  font-size: 30px;
+  font-size: 1.3rem;
   height: 50px;
-  width: 350px;
+  width: 180px;
 }
 
 
@@ -189,6 +213,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   padding: 40px 0 40px 0;
   gap: 20px;
 }
@@ -198,20 +223,26 @@ header {
 }
 
 .center-area span {
-  font-size: 30px;
-  color: white;
+  font-size: 35px;
+  color: #F0CB35;
 }
+
+.scores span {
+  color: #4f4f51;
+  font-size: 1.5rem;
+}
+
 
 .player-area {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  border-radius: 25px;
-  box-shadow: 0 0 10px Green;
-  background: white;
-  width: 100px;
-  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  background: #edf0f1;
+  width: 300px;
+  height: 220px;
 }
 
 .player-area h2 {
@@ -225,12 +256,11 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  border-radius: 25px;
-  box-shadow: 0 0 10px red;
-  width: 100px;
-  height: 100px;
-  background: white;
-  text-transform: uppercase;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  width: 300px;
+  height: 220px;
+  background: #edf0f1;
 }
 
 .computer-area h2,
@@ -253,20 +283,22 @@ p {
   font-family:inherit;
   font-size: 22px;
   text-transform: uppercase;
-  width: 150px;
+  width: 100px;
   height: 50px;
   border-radius: 25px;
   margin: 5px;
-  background-color: white;
+  background-color: #F0CB35;
+  font-weight: 500;
+  color:black;
   border-style: none;
 }
 
 .option-buttons:hover {
-  background-color: orange;
-  outline: 0.5px solid orange;
+  background-color: #edf0f1;
+  box-shadow: 0 0 9px #f58f7c;
+  outline: 0.5px solid #f58f7c;
   transition: 0.1s ease;
-  color: white;
-  font-size: 24px;
+  color: black;
 }
 
 .option-buttons:active {
@@ -276,71 +308,20 @@ p {
 .game-container{
   display: flex;
   flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   padding: 30px 10px;
   border-radius: 50px;
   width: 600px;
-  height: 800px;
+  height: 900px;
   margin: 0 auto;
-  background-color: #24252a;
+  background-color: #4f4f51;
 }
 
-.rules-area {
-  height: 300px;
-  width: 300px;
-}
-
-.fa {
-  padding: 20px;
-  margin: 0 10px;
-  font-size: 30px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.abs-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 50px;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-
-@media screen and (max-width: 600px) {
-  .game-container {
-    width: 100%;
-    height: 100%;
+@media screen and (max-width: 700px) {
+  .center-area {
+    display:flex;
+    flex-direction: column;
   }
-
-
-  .game-buttons button {
-    margin: 10px 10px;
-  }
-
 }
-
-@media screen and (max-width: )

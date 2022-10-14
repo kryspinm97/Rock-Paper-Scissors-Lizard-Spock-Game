@@ -16,32 +16,32 @@
     <header class="heading"> Rock, Paper, Scissors, Lizard and Spock !</header>
   </div>
 
-  <div class="info">
-    <p>Make your Choice and battle against the Computer!</p>
-    <p>Rules are simple, Best of 10 wins!</p>
-  </div>
-
-
-
-<div class="game-container">
 
   <div class="center-area">
 
     <div class="player-area">
-      <div>
+      <div class ="scores">
         <h2>You</h2>
+        <span >Score : </span><span id="playerScore">0</span>
+        <span id="playerPickChoice"></span>
       </div>
     </div>
 
-    <span id="playerScore">0</span>
-    <span>:</span>
-    <span id="computerScore">0</span>
+    
+    <span>VS</span>
+    
 
     <div class="computer-area">
-      <div>
-        <h2>Com</h2>
+      <div class ="scores">
+        <h2>Computer</h2>
+        <span>Score : </span><span id="computerScore">0</span>
+        <span id="comPickChoice"></span>
       </div>
     </div>
+  </div> 
+
+  <div id="resultMessage">
+    <span id="rsltMsg"></span>
   </div>
 
   <div class="game-buttons">
@@ -52,22 +52,15 @@
     <button id="spock" class="btn-blue"><i class="fa-regular fa-hand-spock"></i><span>Spock</span></button>
   </div>
 
-  <div class="result-message">
-    <span id="rsltMsg"></span>
+  <div class="opt-btn-pos">
+    <button id="play" class="option-buttons">Play</button>
+    <button id="rules" class ="option-buttons">Rules</button>
+    <button id="reset" class="option-buttons">Reset</button>
   </div>
 
-</div>
+  
+  
 
-<div class="opt-btn-pos">
-  <button id="play" class="option-buttons">Play</button>
-  <button id="reset" class="option-buttons">Reset</button>
-</div>
-
-
-<footer class="abs-footer">
-  <a href="#" class="fa fa-facebook"></a>
-  <a href="#" class="fa fa-youtube"></a>
-</footer>
 
   <script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
