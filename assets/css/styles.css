@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/************** Main Page/Body/Header settings ***************/
+
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +14,26 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    45deg,
-    #4B79A1,
-    #283E51
-  );
+  background: linear-gradient(45deg,
+      #4B79A1,
+      #283E51);
 }
 
-#heading header {
-  color:#edf0f1;
+header {
+  font-size: 35px;
+  color: #edf0f1;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
 }
+
+/* --------------------------------------------------- */
+
+/***** Styling for Score of Player/Computer and Position of Player/Computer Choice *****/
 
 #playerScore {
   color: limegreen;
@@ -32,42 +44,89 @@ body {
 }
 
 #playerPickChoice {
-  display:flex;
-  position:relative;
+  display: flex;
+  position: relative;
   top: 20px;
 }
 
 #comPickChoice {
-  display:flex;
-  position:relative;
+  display: flex;
+  position: relative;
   top: 20px;
 }
 
-header {
-  font-size: 35px;
-  color: #4f4f51;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 20px;
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  justify-content: center;
+/* --------------------------------------------------- */
+
+/************** Modal Styling for the list of Rules of the game ****************/
+
+.modal .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)scale(0);
+  background: #edf0f1;
+  width: 400px;
+  height: 500px;
+  z-index: 2;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
-.info p {
-  width: 50%;
-  font-size: 1.3rem;
-  text-align: center;
-  color: white;
+.modal-content p {
+  margin: 10px;
 }
+
+.modal-content h2 {
+  font-size: 2rem;
+}
+
+.modal.active .overlay {
+  display: block;
+}
+
+.modal.active .modal-content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%)scale(1);
+}
+
+.modal .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #F0CB35;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #edf0f1;
+}
+
+.close-btn:active {
+  transform: translateY(2px);
+}
+
+/* ------------------------------------------------ */
+
+/***** Game Buttons *****/
 
 .game-buttons {
   width: 100%;
@@ -86,9 +145,9 @@ header {
 }
 
 .game-buttons button {
-  background-color: #d6d6d6;
-  border: 5px solid #d6d6d6;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  background-color: #edf0f1;
+  border: 5px solid #edf0f1;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
   transition: 0.1s ease;
   border-radius: 15px;
   cursor: pointer;
@@ -104,21 +163,9 @@ header {
   bottom: 15px;
 }
 
-.game-rules-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 500px;
-}
-
-.game-rules-img img {
-  border-radius: 100px;
-}
-
 .btn-grey:hover {
-  border: 2px solid grey;
-  box-shadow: 0 5px 5px grey;
+  border: 5px solid grey;
+  box-shadow: 0 2px 2px grey;
   color: grey;
 }
 
@@ -126,10 +173,9 @@ header {
   transform: translateY(4px);
 }
 
-
 .btn-green:hover {
-  border: 2px solid limegreen;
-  box-shadow: 0 5px 5px limegreen;
+  border: 5px solid limegreen;
+  box-shadow: 0 2px 2px limegreen;
   color: limegreen;
 }
 
@@ -138,8 +184,8 @@ header {
 }
 
 .btn-blue:hover {
-  border: 2px solid lightskyblue;
-  box-shadow: 0 5px 5px lightskyblue;
+  border: 5px solid lightskyblue;
+  box-shadow: 0 2px 2px lightskyblue;
   color: lightskyblue;
 }
 
@@ -148,8 +194,8 @@ header {
 }
 
 .btn-red:hover {
-  border: 2px solid red;
-  box-shadow: 0 5px 5px red;
+  border: 5px solid red;
+  box-shadow: 0 2px 2px red;
   color: red;
 }
 
@@ -158,8 +204,8 @@ header {
 }
 
 .btn-orange:hover {
-  border: 2px solid orange;
-  box-shadow: 0 5px 5px orange;
+  border: 5px solid orange;
+  box-shadow: 0 2px 2px orange;
   color: orange;
 }
 
@@ -187,6 +233,107 @@ header {
   color: lightskyblue;
 }
 
+/* ------------------------------------------------ */
+
+/***** Player vs Computer Area + Scores ******/
+
+.center-area {
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 40px 0 40px 0;
+  gap: 20px;
+}
+
+.center-area span {
+  font-size: 35px;
+  color: #F0CB35;
+}
+
+.player-area {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  background: #edf0f1;
+  width: 300px;
+  height: 220px;
+}
+
+.player-area h2 {
+  color: black;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.computer-area {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  height: 220px;
+  background: #edf0f1;
+}
+
+.computer-area h2 {
+  color: black;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.scores span {
+  color: #4f4f51;
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------------------ */
+
+/***** Option Buttons For Play / Rules & Reset *****/
+
+.opt-btn-pos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.option-buttons {
+  height: 150px;
+  font-family: inherit;
+  font-size: 22px;
+  text-transform: uppercase;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #F0CB35;
+  font-weight: 500;
+  color: black;
+  border-style: none;
+}
+
+.option-buttons:hover {
+  background-color: #edf0f1;
+  box-shadow: 0 0 9px #F0CB35;
+  outline: 0.5px solid #F0CB35;
+  transition: 0.1s ease;
+  color: black;
+}
+
+.option-buttons:active {
+  transform: translateY(4px);
+}
+
+/***** Result Message after Choice was made *****/
+
 #resultMessage {
   display: flex;
   justify-content: center;
@@ -207,154 +354,140 @@ header {
   width: 180px;
 }
 
+/* ------------------------------------------------ */
 
-.center-area {
-  display: flex;
-  flex-wrap: row wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 40px 0 40px 0;
-  gap: 20px;
-}
-
-.center-area img {
-  border-radius: 50px;
-}
-
-.center-area span {
-  font-size: 35px;
-  color: #F0CB35;
-}
-
-.scores span {
-  color: #4f4f51;
-  font-size: 1.5rem;
-}
-
-
-.player-area {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-  background: #edf0f1;
-  width: 300px;
-  height: 220px;
-}
-
-.player-area h2 {
-  color: black;
-  margin: 10px;
-  text-transform: uppercase;
-}
-
-.computer-area {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-  width: 300px;
-  height: 220px;
-  background: #edf0f1;
-}
-
-.computer-area h2,
-p {
-  color: black;
-  margin: 10px;
-  font-size: 1.5rem;
-}
-
-.opt-btn-pos {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-}
-
-.option-buttons {
-  height: 150px;
-  font-family:inherit;
-  font-size: 22px;
-  text-transform: uppercase;
-  width: 100px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: #F0CB35;
-  font-weight: 500;
-  color:black;
-  border-style: none;
-}
-
-.option-buttons:hover {
-  background-color: #edf0f1;
-  box-shadow: 0 0 9px #f58f7c;
-  outline: 0.5px solid #f58f7c;
-  transition: 0.1s ease;
-  color: black;
-}
-
-.option-buttons:active {
-  transform: translateY(4px);
-}
-
-.game-container{
-  display: flex;
-  flex-direction: column;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 10px;
-  border-radius: 50px;
-  width: 600px;
-  height: 900px;
-  margin: 0 auto;
-  background-color: #4f4f51;
-}
+/* Media Queries for Mobile Devices */
 
 @media screen and (max-width: 700px) {
   .center-area {
-    display:flex;
+    display: flex;
     flex-direction: column;
+  }
+
+  .modal-content {
+    font-size:25px;
   }
 }
 
 @media screen and (max-width: 550px) {
   .game-buttons i {
-  font-size: 3em;
-  display: flex;
-  margin: 3px 3px;
+    font-size: 3em;
+    display: flex;
+    margin: 3px 3px;
   }
 
   .game-buttons span {
     display: none;
   }
 
-  #playerPickChoice {
-   display:flex;
-   position: relative;
-   top: 0;
+  .modal-content {
+    font-size:25px;
   }
 
-  #comPickChoice {
-    display:flex;
+  #playerPickChoice {
+    display: flex;
     position: relative;
     top: 0;
   }
 
-  .player-area , .computer-area {
+  #comPickChoice {
+    display: flex;
+    position: relative;
+    top: 0;
+  }
+
+  .player-area,
+  .computer-area {
+    font-size: 15px;
     height: 120px;
   }
 
+  .scores span {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    font-size:22px;
+  }
+
   .btn-blue:hover {
+    border: 5px solid lightskyblue;
+  }
+
+  .btn-grey:hover {
     border: 5px solid grey;
   }
 
+  .btn-orange:hover {
+    border: 5px solid orange;
+  }
+
+  .btn-red:hover {
+    border: 5px solid red;
+  }
+
+  .btn-green:hover {
+    border: 5px solid limegreen;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .player-area ,.computer-area {
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .game-buttons i {
+    font-size: 2.5em;
+    display: flex;
+    margin: 2px 2px;
+  }
+
+  .modal-content {
+    font-size:25px;
+  }
+
+  .center-area {
+    flex-direction: row;
+  }
+
+  .scores span {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .player-area ,.computer-area {
+    font-size: 15px;
+    width: 200px;
+    height: 120px;
+  }
+
+  .scores {
+    position: relative;
+    bottom: 16px;
+  }
+
+  .modal-content {
+    font-size:25px;
+  }
+
+  .game-buttons i {
+    font-size: 4.5em;
+    display: flex;
+    margin: 5px 5px;
+  }
+
+  .game-buttons span{
+    display: none;
+  }
+
+  .center-area {
+    flex-direction: row;
+  }
+
+  .scores span {
+    font-size: 20px;
+  }
 }

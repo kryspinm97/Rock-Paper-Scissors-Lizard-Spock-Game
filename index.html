@@ -8,37 +8,32 @@
   <title>Rock,Paper,Scissors, Lizard and Spock</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 </head>
 
 <body>
 
-  <div id="heading">
-    <header class="heading"> Rock, Paper, Scissors, Lizard and Spock !</header>
-  </div>
-
+  <header> Rock, Paper, Scissors, Lizard and Spock !</header>
 
   <div class="center-area">
-
     <div class="player-area">
-      <div class ="scores">
+      <div class="scores">
         <h2>You</h2>
-        <span >Score : </span><span id="playerScore">0</span>
+        <span>Score : </span><span id="playerScore">0</span>
         <span id="playerPickChoice"></span>
       </div>
     </div>
 
-    
     <span>VS</span>
-    
 
     <div class="computer-area">
-      <div class ="scores">
+      <div class="scores">
         <h2>Computer</h2>
         <span>Score : </span><span id="computerScore">0</span>
         <span id="comPickChoice"></span>
       </div>
     </div>
-  </div> 
+  </div>
 
   <div id="resultMessage">
     <span id="rsltMsg"></span>
@@ -54,13 +49,27 @@
 
   <div class="opt-btn-pos">
     <button id="play" class="option-buttons">Play</button>
-    <button id="rules" class ="option-buttons">Rules</button>
+    <button onclick="toggleModal()" class="option-buttons">Rules</button>
+    <div class="modal" id="modal">
+      <div onclick="toggleModal()" class="overlay"></div>
+      <div class="modal-content">
+        <h2>Rules</h2>
+        <p>Scissors cuts Paper</p>
+        <p>Paper covers Rock</p>
+        <p>Rock crushes Lizard</p>
+        <p>Lizard poisons Spock</p>
+        <p>Spock smashes Scissors</p>
+        <p>Scissors decapitates Lizard</p>
+        <p>Lizard eats Paper</p>
+        <p>Paper disproves Spock</p>
+        <p>Spock vaporizes Rock</p>
+        <p>And as it always has, Rock crushes Scissors!</p>
+        <button class="close-btn" onclick="toggleModal()">&times;</button>
+      </div>
+    </div>
+    <div id="overlay"></div>
     <button id="reset" class="option-buttons">Reset</button>
   </div>
-
-  
-  
-
 
   <script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>

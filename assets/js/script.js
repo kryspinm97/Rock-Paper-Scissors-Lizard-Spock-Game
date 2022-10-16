@@ -1,27 +1,24 @@
-let picks = [{
-    "id": "Rock"
-  },
-  {
-    "id": "Paper"
-  },
-  {
-    "id": "Scissors"
-  },
-  {
-    "id": "Lizard"
-  },
-  {
-    "id": "Spock"
-  }
+/* Setting the picks and the game rules here of which pick beats what in the game */
+
+let picks = [
+  {"id": "Rock"},
+  {"id": "Paper"},
+  {"id": "Scissors"},
+  {"id": "Lizard"},
+  {"id": "Spock"}
 ];
 
 let gameRules = {
-  Rock: ["Lizard", "Scissors"],
-  Paper: ["Rock", "Spock"],
-  Scissors: ["Paper", "Lizard"],
-  Lizard: ["Spock", "Paper"],
-  Spock: ["Scissors", "Rock"],
+  Rock:       ["Lizard", "Scissors"],
+  Paper:      ["Rock", "Spock"],
+  Scissors:   ["Paper", "Lizard"],
+  Lizard:     ["Spock", "Paper"],
+  Spock:      ["Scissors", "Rock"],
 };
+
+/**
+ * Getting the Elements from the HTML and setting their variables.
+ */
 
 let resultMessage = document.getElementById('rsltMsg');
 let btnReset = document.getElementById("reset");
@@ -38,6 +35,8 @@ const spock = document.getElementById("spock");
 let pScore = 0;
 let cScore = 0;
 
+/**---------------------------------------------------------- */
+
 /* Game buttons are disabled by default until the Play button is pressed */
 
 document.getElementById("rock").disabled = true;
@@ -45,6 +44,12 @@ document.getElementById("paper").disabled = true;
 document.getElementById("scissor").disabled = true;
 document.getElementById("lizard").disabled = true;
 document.getElementById("spock").disabled = true;
+
+/**---------------------------------------------------------- */
+
+/** Once the Play button has been pressed the buttons are enabled and the player can Play the game 
+ *  also Reset reloads the page enabling the player to start from the beginning / again
+*/
 
 btnPlay.addEventListener('click', event => {
   document.getElementById("rock").disabled = false;
@@ -54,21 +59,26 @@ btnPlay.addEventListener('click', event => {
   document.getElementById("spock").disabled = false;
 })
 
-/* Game buttons are disabled by default until the Play button is pressed */
-
 btnReset.addEventListener('click', event => {
   document.location.reload(true);
-});
+})
+
+/**---------------------------------------------------------- */
+
+/**
+ * Event listeners for Each click of a button calculate the Computer Pick on random between 0 and 4
+ * which is each choice in the game of Rock being 0 , Paper being 1 and so on.
+ * Then it takes in our value of pick into that button and compares with the Computer Pick at random.
+ */
+
 
 rock.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(0, compPick);
 });
 
 paper.addEventListener('click', event => {
   const compPick = Math.floor(Math.random() * 5);
-  console.log(compPick);
   gameResult(1, compPick);
 });
 
@@ -88,38 +98,49 @@ spock.addEventListener('click', event => {
 });
 
 /**
- * Function to run game
- * takes in player pick and computer pick as numeric variables
+ * Function here runs the game
+ * Takes in the player pick and Computer pick as numeric variables of 0 - 4.
+ * and compares the result between the Player Pick and Comp Pick with if conditions.
+ * and gives out the results via innerHTML also incrementing the score with each pick.
  */
+
 function gameResult(player1, Comp) {
 
   const playerPick = picks[player1].id;
-
   const compPick = picks[Comp].id;
-
   const playerRulePick = gameRules[playerPick];
 
   if (playerPick === compPick) {
-    resultMessage.style.cssText="background-color: #e5e5e5; color: #808080";
+    resultMessage.style.cssText = "background-color: #e5e5e5; color: #808080";
     resultMessage.innerHTML = ("It's a draw!");
   } else if (playerRulePick.includes(compPick)) {
-    resultMessage.style.cssText="background-color: #cefdce; color: #689f38";
+    resultMessage.style.cssText = "background-color: #cefdce; color: #689f38";
     resultMessage.innerHTML = (`You win!`);
     pScore++;
   } else {
-    resultMessage.style.cssText="background-color: #ffdde0; color: #d32f2f";
+    resultMessage.style.cssText = "background-color: #ffdde0; color: #d32f2f";
     resultMessage.innerHTML = (`Computer wins!`);
     cScore++;
+
   }
   document.getElementById("playerScore").innerHTML = `${pScore}`;
   document.getElementById("computerScore").innerHTML = `${cScore}`;
   pickPlayer.innerHTML = (`You picked ${playerPick}`);
   pickCom.innerHTML = (`Com picked ${compPick}`);
   bestOfTen();
-
-
 };
 
+/**
+ * This function toggles the Modal of Rules Active and Closes.
+ */
+function toggleModal() {
+  document.getElementById("modal").classList.toggle("active");
+}
+
+/**
+ * This function sets the game to 10 rounds and alerting 
+ * whichever player has reached a score of 10 first wins the game.
+ */
 
 function bestOfTen(player1, comp) {
 
