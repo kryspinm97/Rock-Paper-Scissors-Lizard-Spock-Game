@@ -23,8 +23,9 @@ let gameRules = {
 let resultMessage = document.getElementById('rsltMsg');
 let btnReset = document.getElementById("reset");
 let btnPlay = document.getElementById("play");
-let pickPlayer = document.getElementById('playerPickChoice')
-let pickCom = document.getElementById('comPickChoice')
+let pickPlayer = document.getElementById('playerPickChoice');
+let pickCom = document.getElementById('comPickChoice');
+let resultOfGame = document.getElementById('game-result');
 
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
@@ -138,6 +139,16 @@ function toggleModal() {
 }
 
 /**
+ * This is a simple function that reloads the page again 
+ * after the player or computer gets the score of 10 to play again.
+ */
+
+function playAgain() {
+  document.location.reload(true);
+}
+
+
+/**
  * This function sets the game to 10 rounds and alerting 
  * whichever player has reached a score of 10 first wins the game.
  */
@@ -145,11 +156,13 @@ function toggleModal() {
 function bestOfTen(player1, comp) {
 
   if (pScore === 10) {
-    alert("You have won the game! Press OK to play again!");
-    document.location.reload(true);
+    document.getElementById("gameResultPopup").classList.toggle("active");
+    resultOfGame.style.cssText = "background-color: #cefdce; color: #689f38";
+    resultOfGame.innerHTML = ('Congratulations! You have Won!'); 
   } else if (cScore === 10) {
-    alert("You have lost the game! Press OK to try again!");
-    document.location.reload(true);
+    document.getElementById("gameResultPopup").classList.toggle("active");
+    resultOfGame.style.cssText = "background-color: #ffdde0; color: #d32f2f";
+    resultOfGame.innerHTML = ('You have Lost!');
   }
 
 }

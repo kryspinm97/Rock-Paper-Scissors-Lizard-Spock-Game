@@ -20,7 +20,7 @@
     <div class="player-area">
       <div class="scores">
         <h2>You</h2>
-        <span>Score : </span><span id="playerScore">0</span>
+        <span></span><span id="playerScore">0</span>
         <span id="playerPickChoice"></span>
       </div>
     </div>
@@ -29,8 +29,10 @@
 
     <div class="computer-area">
       <div class="scores">
+        <div class="top-card">
         <h2>Computer</h2>
-        <span>Score : </span><span id="computerScore">0</span>
+        </div>
+        <span></span><span id="computerScore">0</span>
         <span id="comPickChoice"></span>
       </div>
     </div>
@@ -50,6 +52,7 @@
 
   <div class="opt-btn-pos">
     <button id="play" class="option-buttons">Play</button>
+
     <button onclick="toggleModal()" class="option-buttons">Rules</button>
     <div class="modal" id="modal">
       <div onclick="toggleModal()" class="overlay"></div>
@@ -69,7 +72,21 @@
       </div>
     </div>
     <div id="overlay"></div>
+
     <button id="reset" class="option-buttons">Reset</button>
+
+    <div class="modal" id="gameResultPopup">
+      <div class="overlay"></div>
+      <div class="gameResultContent">
+        <span id="game-result"></span>
+        <button class="close-btn-result" onclick="playAgain()">Play Again</button>
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+
+
+
   </div>
 
   <script src="assets/js/script.js"></script>

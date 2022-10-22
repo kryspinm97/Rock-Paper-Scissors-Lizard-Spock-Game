@@ -14,9 +14,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(45deg,
-      #4B79A1,
-      #283E51);
+  background: linear-gradient(
+    45deg,
+      #283048,
+      #859398);
 }
 
 header {
@@ -37,10 +38,14 @@ header {
 
 #playerScore {
   color: limegreen;
+  font-weight: bolder;
+  font-size: 2.3rem;
 }
 
 #computerScore {
   color: red;
+  font-weight: bolder;
+  font-size: 2.3rem;
 }
 
 #playerPickChoice {
@@ -124,6 +129,74 @@ header {
 .close-btn:active {
   transform: translateY(2px);
 }
+
+/********* ! Game Result Modal for Winning / Losing Game **********/
+
+.gameResultContent {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%)scale(0);
+background: #edf0f1;
+width: 400px;
+height: 300px;
+z-index: 2;
+text-align: center;
+padding: 30px;
+box-sizing: border-box;
+border-radius: 15px;
+}
+
+.gameResultContent span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.gameResultContent h2 {
+  font-size: 2rem;
+}
+
+.gameResultContent.active .overlay {
+  display: block;
+}
+
+.modal.active .gameResultContent {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%)scale(1);
+}
+
+.modal .close-btn-result{
+  height: 150px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #F0CB35;
+  font-weight: 500;
+  color: black;
+  border-style: none;
+}
+
+.close-btn-result:hover {
+  background-color: #edf0f1;
+  box-shadow: 0 0 9px #F0CB35;
+  outline: 0.5px solid #F0CB35;
+  transition: 0.1s ease;
+  color: black;
+}
+
+.close-btn-result:active {
+  transform: translateY(4px);
+}
+
+
 
 /* ------------------------------------------------ */
 
@@ -250,6 +323,7 @@ header {
 
 .center-area span {
   font-size: 35px;
+  font-weight: bolder;
   color: #F0CB35;
 }
 
