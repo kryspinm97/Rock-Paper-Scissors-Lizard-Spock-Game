@@ -17,10 +17,11 @@
   <header> Rock, Paper, Scissors, Lizard and Spock !</header>
 
   <div class="center-area">
+
     <div class="player-area">
       <div class="scores">
         <h2>You</h2>
-        <span></span><span id="playerScore">0</span>
+        <span id="playerScore">0</span>
         <span id="playerPickChoice"></span>
       </div>
     </div>
@@ -29,13 +30,12 @@
 
     <div class="computer-area">
       <div class="scores">
-        <div class="top-card">
         <h2>Computer</h2>
-        </div>
-        <span></span><span id="computerScore">0</span>
+        <span id="computerScore">0</span>
         <span id="comPickChoice"></span>
       </div>
     </div>
+    
   </div>
 
   <div id="resultMessage">
@@ -71,9 +71,10 @@
         <button class="close-btn" onclick="toggleModal()">&times;</button>
       </div>
     </div>
-    <div id="overlay"></div>
 
     <button id="reset" class="option-buttons">Reset</button>
+  </div>
+  <div id="overlay"></div>
 
     <div class="modal" id="gameResultPopup">
       <div class="overlay"></div>
@@ -82,12 +83,11 @@
         <button class="close-btn-result" onclick="playAgain()">Play Again</button>
       </div>
     </div>
-    <div id="overlay"></div>
 
+    <div class="social">
+      <p>Kryspin © 2022</p>
+    </div>
 
-
-
-  </div>
 
   <script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>

@@ -157,12 +157,10 @@ function bestOfTen(player1, comp) {
 
   if (pScore === 10) {
     document.getElementById("gameResultPopup").classList.toggle("active");
-    resultOfGame.style.cssText = "background-color: #cefdce; color: #689f38";
-    resultOfGame.innerHTML = ('Congratulations! You have Won!'); 
+    resultOfGame.innerHTML = ('Congratulations! <br> You have Won!'); 
   } else if (cScore === 10) {
     document.getElementById("gameResultPopup").classList.toggle("active");
-    resultOfGame.style.cssText = "background-color: #ffdde0; color: #d32f2f";
-    resultOfGame.innerHTML = ('You have Lost!');
+    resultOfGame.innerHTML = ('You have Lost! <br> Press the button to try again');
   }
 
 }
