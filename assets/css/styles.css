@@ -744,4 +744,80 @@ header {
 
   }
 
+  /*** For iPhone 4/4s *****/
+  @media 
+    only screen and (min-device-width: 320px) 
+    and (max-device-width: 480px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 2/3)
+{
+
+  .game-buttons i {
+    font-size: 1rem;
+  }
+
+  .center-area {
+    flex-direction: row;
+  }
+
+  .player-area, .computer-area{
+    height: 140px;
+    width: 120px;
+    font-size: 0.5rem;
+  }
+  
+
+  .center-area span {
+    font-size: 17px;
+  }
+
+  .gameResultContent {
+    width: 280px;
+    height: 200px;
+  }
+
+  .close-btn-result {
+    width: 140px;
+    height: 120px;
+  }
+
+}
+
+/***** iPhone5+ ******/ 
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5)
+  {
+
+    .game-buttons i {
+      font-size: 1.5rem;
+    }
+
+    .game-buttons button {
+      margin: 7px 7px;
+    }
+  
+    .center-area {
+      flex-direction: row;
+    }
+
+    .center-area span {
+      font-size: 15px;
+    }
+
+    .player-area, .computer-area {
+      width: 100px;
+      font-size: 0.6rem;
+    }
+
+    .gameResultContent {
+      width: 280px;
+      height: 200px;
+    }
+
+  }
+
+
+
 }

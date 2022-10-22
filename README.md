@@ -56,7 +56,12 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 ## 5. Surface ##
 
  * Theme Selection 
-    * I have went with a linear gradient option for the theme background of my page as I felt like it is least invasive of grabbing attention away from the player if I was to use a game-style background.
+    * I have went with a linear gradient option for the theme background of my page as I felt like it is least invasive of grabbing attention away from the player if I was to use a game-style background, along with few other choices of colors for buttons / text.
+    <br>
+    The main colors of the buttons, background, text.
+
+  
+  ![ScreenShot](./assets/readmeImages/Color%20Pallete.png)
 
   * Font Selection 
     * The font I have went with for this project is : Questrial , which I have sourced from the google fonts page.
@@ -64,15 +69,14 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 
 # Testing # 
 
- * 
+ * I have tested the game on Google Chrome, Firefox and Safari browser with no issues
+ * All the buttons and game functions work correctly 
+ * Score incrementing works as intended
+ * Computer choice randomisation works properly
+ * Button interaction feels responsive and smooth
+ * Have also tested the game on different devices using the DevTools Device list working good.
+ * Buttons reposition themselves along with the computer and player score as screen gets smaller
 
-# Bugs # 
-
-### Solved Bugs ### 
-
-### Unsolved Bugs ###
-
- 
 
 # Validator Testing #
 
@@ -91,14 +95,25 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 
   ![ScreenShot](./assets/readmeImages/LightHouse%20Test.png)
 
-# Potential Features #
-
 
 # Deployment #
+
+  * The steps followed to deploy the site are as follows : 
+  * In the GitHub repository, navigate to the Settings tab;
+  * From the source section drop-down menu select Pages , from branch select main.
+  * Once the branch has been selected the live version of the page will be deployed.
+
+  * You can find the deployed version of the game here : <a href="https://kryspinm97.github.io/Rock-Paper-Scissors-Lizard-Spock-Game/" target="_blank">Rock,Paper,Scissors,Lizard and Spock!</a>
 
 # Credits #
 
 ### Media ###
 
+For the duration of this project I have used resources such as : 
+
+* <a href="https://google.com">Google</a>
+* <a href="https://google.com">AMI Responsive</a>
+* <a href="https://google.com">Google</a>
+* <a href="https://google.com">Google</a>
 
 ### Coding ###
