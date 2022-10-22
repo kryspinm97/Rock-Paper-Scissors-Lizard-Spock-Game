@@ -64,6 +64,8 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 
 # Testing # 
 
+ * 
+
 # Bugs # 
 
 ### Solved Bugs ### 
