@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(30deg, #232526, #414345);
+  background: linear-gradient(180deg, #edf0f1, #232526);
 }
 
 header {
@@ -25,7 +25,7 @@ header {
   text-align: center;
   text-transform: capitalize;
   font-weight: bolder;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* --------------------------------------------------- */
@@ -221,7 +221,7 @@ header {
 
 .game-buttons button {
   background-color: #edf0f1;
-  border: 2px solid #232526;
+  border: 2px solid #edf0f1;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
   transition: 0.1s ease;
   border-radius: 100px;
@@ -392,7 +392,6 @@ header {
   border-radius: 25px;
   border-style: none;
   color: black;
-  
 }
 
 .option-buttons:hover {
@@ -414,7 +413,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px 10px 30px;
+  padding: 10px 10px 20px;
   margin: 0 auto;
 }
 
@@ -441,7 +440,6 @@ header {
 .social {
   display: flex;
   justify-content: center;
-
   width: 100%;
 }
 
@@ -459,8 +457,7 @@ header {
 
 /* Media Queries for Mobile Devices */
 
-@media screen and (max-width: 390px) and (max-height:844px) {
-
+@media screen and (max-width: 390px) and (max-height: 844px) {
   header {
     font-size: 1.5em;
   }
@@ -469,26 +466,24 @@ header {
     flex-direction: row;
   }
 
-  .player-area, .computer-area {
-    width:150px;
-    height:190px;
+  .player-area,
+  .computer-area {
+    width: 150px;
+    height: 180px;
   }
-
   .game-buttons i {
     font-size: 2em;
     margin: 15px 15px;
   }
-  
+
   .game-buttons button {
     margin: 2px 2px;
   }
 
   .option-buttons {
-    width:85px;
+    width: 85px;
     height: 35px;
   }
-
-
 }
 
 @media screen and (max-width: 430px) and (max-height: 930px) {
@@ -502,10 +497,14 @@ header {
 
   .game-buttons i {
     font-size: 3.5em;
-    margin: 25px 25px;
   }
 
-  .player-area, .computer-area {
+  .game-buttons button {
+    margin: 0 3px;
+  }
+
+  .player-area,
+  .computer-area {
     width: 150px;
   }
 
@@ -526,20 +525,20 @@ header {
     width: 300px;
     height: 200px;
   }
-
 }
 
-@media screen and (max-width:320px) and (max-height: 480px) {
+@media screen and (max-width: 320px) and (max-height: 480px) {
   header {
     font-size: 1.2em;
   }
 
-  #playerScore, #computerScore {
+  #playerScore,
+  #computerScore {
     font-size: 2.5em;
   }
 
   #resultMessage {
-    padding:10px;
+    padding: 10px;
   }
 
   .scores-container {
@@ -548,14 +547,20 @@ header {
   }
 
   .scores-container span {
-    font-size:1em;
+    font-size: 1em;
+  }
+
+  .game-buttons i {
+    font-size: 2em;
+    margin: 10px 10px;
   }
 
   .game-buttons button {
     margin: 1px 1px;
   }
 
-  .player-area , .computer-area {
+  .player-area,
+  .computer-area {
     width: 100px;
     height: 130px;
   }
@@ -566,10 +571,10 @@ header {
     font-weight: bold;
   }
 
-  .player-area h2, .computer-area h2 {
+  .player-area h2,
+  .computer-area h2 {
     font-size: 1.2em;
   }
-
-
-
 }
+
+/* ------------------------------------------------ */
