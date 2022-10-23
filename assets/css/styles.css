@@ -493,15 +493,20 @@ header {
 
 @media screen and (max-width: 430px) and (max-height: 930px) {
   header {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .scores-container {
     flex-direction: row;
   }
 
+  .game-buttons i {
+    font-size: 3.5em;
+    margin: 25px 25px;
+  }
+
   .player-area, .computer-area {
-    width: 180px;
+    width: 150px;
   }
 
   .modal .modal-content {
