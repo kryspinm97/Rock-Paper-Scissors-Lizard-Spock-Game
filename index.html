@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rock, Paper, Scissors, Lizard and Spock Game"
+    />
+    <meta
+      name="keywords"
+      content="game, rock, paper, scissors, lizard, spock, big bang theory, sheldon's game"
+    />
+    <title>Rock,Paper,Scissors, Lizard and Spock</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content ="Rock, Paper, Scissors, Lizard and Spock Game">
-  <meta name="keywords" content ="game, rock, paper, scissors, lizard, spock, big bang theory, sheldon's game">
-  <title>Rock,Paper,Scissors, Lizard and Spock</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-</head>
-
-<body>
-
-  <header> Rock, Paper, Scissors, Lizard and Spock !</header>
-
-  <div class="center-area">
-
-    <div class="player-area">
-      <div class="scores">
-        <h2>You</h2>
-        <span id="playerScore">0</span>
-        <span id="playerPickChoice"></span>
-      </div>
-    </div>
-
-    <span>VS</span>
-
-    <div class="computer-area">
-      <div class="scores">
-        <h2>Computer</h2>
-        <span id="computerScore">0</span>
-        <span id="comPickChoice"></span>
-      </div>
-    </div>
+  <body>
     
-  </div>
+    <header>Rock, Paper, Scissors, Lizard and Spock !</header>
 
-  <div id="resultMessage">
-    <span id="rsltMsg"></span>
-  </div>
+    <div class="scores-container">
+      <div class="player-area">
+        <div class="scores">
+          <h2>You</h2>
+          <span id="playerScore">0</span>
+          <span id="playerPickChoice"></span>
+        </div>
+      </div>
 
-  <div class="game-buttons">
-    <button id="rock" class="btn-grey" aria-label="Rock Button"><i class="fa-regular fa-hand-back-fist"></i><span>Rock</span></button>
-    <button id="paper" class="btn-orange" aria-label="Paper Button"><i class="fa-regular fa-hand"></i><span>Paper</span></button>
-    <button id="scissor" class="btn-red" aria-label="Scissors Button"><i class="fa-regular fa-hand-scissors"></i><span>Scissors</span></button>
-    <button id="lizard" class="btn-green" aria-label="Lizard Button"><i class="fa-regular fa-hand-lizard"></i><span>Lizard</span></button>
-    <button id="spock" class="btn-blue" aria-label="Spock Button"><i class="fa-regular fa-hand-spock"></i><span>Spock</span></button>
-  </div>
-
-  <div class="opt-btn-pos">
-    <button id="play" class="option-buttons">Play</button>
-
-    <button onclick="toggleModal()" class="option-buttons">Rules</button>
-    <div class="modal" id="modal">
-      <div onclick="toggleModal()" class="overlay"></div>
-      <div class="modal-content">
-        <h2>Rules</h2>
-        <p>Scissors cuts Paper</p>
-        <p>Paper covers Rock</p>
-        <p>Rock crushes Lizard</p>
-        <p>Lizard poisons Spock</p>
-        <p>Spock smashes Scissors</p>
-        <p>Scissors decapitates Lizard</p>
-        <p>Lizard eats Paper</p>
-        <p>Paper disproves Spock</p>
-        <p>Spock vaporizes Rock</p>
-        <p>And as it always has, Rock crushes Scissors!</p>
-        <button class="close-btn" onclick="toggleModal()">&times;</button>
+      <div class="computer-area">
+        <div class="scores">
+          <h2>Computer</h2>
+          <span id="computerScore">0</span>
+          <span id="comPickChoice"></span>
+        </div>
       </div>
     </div>
 
-    <button id="reset" class="option-buttons">Reset</button>
-  </div>
+    <div id="resultMessage">
+      <span id="rsltMsg"></span>
+    </div>
 
-  <div id="overlay"></div>
+    <div class="game-buttons">
+      <button id="rock" class="btn-grey" aria-label="Rock Button">
+        <i class="fa-regular fa-hand-back-fist"></i>
+      </button>
+      <button id="paper" class="btn-orange" aria-label="Paper Button">
+        <i class="fa-regular fa-hand"></i>
+      </button>
+      <button id="scissor" class="btn-red" aria-label="Scissors Button">
+        <i class="fa-regular fa-hand-scissors"></i>
+      </button>
+      <button id="lizard" class="btn-green" aria-label="Lizard Button">
+        <i class="fa-regular fa-hand-lizard"></i>
+      </button>
+      <button id="spock" class="btn-blue" aria-label="Spock Button">
+        <i class="fa-regular fa-hand-spock"></i>
+      </button>
+    </div>
+
+    <div class="opt-btn-pos">
+      <button id="play" class="option-buttons">Play</button>
+
+      <button onclick="toggleModal()" class="option-buttons">Rules</button>
+      <div class="modal" id="modal">
+        <div onclick="toggleModal()" class="overlay"></div>
+        <div class="modal-content">
+          <h2>Rules</h2>
+          <p>Scissors cuts Paper</p>
+          <p>Paper covers Rock</p>
+          <p>Rock crushes Lizard</p>
+          <p>Lizard poisons Spock</p>
+          <p>Spock smashes Scissors</p>
+          <p>Scissors decapitates Lizard</p>
+          <p>Lizard eats Paper</p>
+          <p>Paper disproves Spock</p>
+          <p>Spock vaporizes Rock</p>
+          <p>And as it always has, Rock crushes Scissors!</p>
+          <button class="close-btn" onclick="toggleModal()">&times;</button>
+        </div>
+      </div>
+
+      <button id="reset" class="option-buttons">Reset</button>
+    </div>
+
+    <div id="overlay"></div>
 
     <div class="modal" id="gameResultPopup">
       <div class="overlay"></div>
       <div class="gameResultContent">
         <span id="game-result"></span>
-        <button class="close-btn-result" onclick="playAgain()">Play Again</button>
+        <button class="close-btn-result" onclick="playAgain()">
+          Play Again
+        </button>
       </div>
     </div>
 
@@ -89,9 +102,10 @@
       <p>Kryspin © 2022</p>
     </div>
 
-
-  <script src="assets/js/script.js"></script>
-  <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
-</body>
-
+    <script src="assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d52c198970.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

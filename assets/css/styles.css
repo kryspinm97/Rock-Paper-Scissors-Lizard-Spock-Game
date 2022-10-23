@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
 /************** Main Page/Body/Header settings ***************/
 
@@ -9,25 +9,23 @@
 }
 
 body {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(45deg,
-      #283048,
-      #859398);
+  align-items: center;
+  background: linear-gradient(30deg, #232526, #414345);
 }
 
 header {
-  font-size: 35px;
-  color: #edf0f1;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 20px;
-  display: flex;
+  width: 100%;
+  font-size: 2.5em;
+  background-color: #f0cb35;
+  color: #232526;
   text-align: center;
-  flex-direction: row;
-  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bolder;
+  padding: 20px;
 }
 
 /* --------------------------------------------------- */
@@ -37,25 +35,21 @@ header {
 #playerScore {
   color: limegreen;
   font-weight: bolder;
-  font-size: 2.3rem;
+  font-size: 4em;
 }
 
 #computerScore {
   color: red;
   font-weight: bolder;
-  font-size: 2.3rem;
+  font-size: 4em;
 }
 
 #playerPickChoice {
   display: flex;
-  position: relative;
-  top: 20px;
 }
 
 #comPickChoice {
   display: flex;
-  position: relative;
-  top: 20px;
 }
 
 /* --------------------------------------------------- */
@@ -77,7 +71,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)scale(0);
+  transform: translate(-50%, -50%) scale(0);
   background: #edf0f1;
   width: 400px;
   height: 500px;
@@ -103,7 +97,7 @@ header {
 
 .modal.active .modal-content {
   transition: all 300ms ease-in-out;
-  transform: translate(-50%, -50%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .modal .close-btn {
@@ -112,7 +106,7 @@ header {
   top: 20px;
   width: 30px;
   height: 30px;
-  background-color: #F0CB35;
+  background-color: #f0cb35;
   font-size: 15px;
   font-weight: 600;
   text-align: center;
@@ -138,7 +132,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)scale(0);
+  transform: translate(-50%, -50%) scale(0);
   background: #edf0f1;
   width: 450px;
   height: 260px;
@@ -168,7 +162,7 @@ header {
 
 .modal.active .gameResultContent {
   transition: all 300ms ease-in-out;
-  transform: translate(-50%, -50%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .close-btn-result {
@@ -180,7 +174,7 @@ header {
   height: 40px;
   border-radius: 25px;
   margin: 5px;
-  background-color: #F0CB35;
+  background-color: #f0cb35;
   font-weight: 500;
   color: black;
   border-style: none;
@@ -188,8 +182,8 @@ header {
 
 .close-btn-result:hover {
   background-color: #edf0f1;
-  box-shadow: 0 0 9px #F0CB35;
-  outline: 0.5px solid #F0CB35;
+  box-shadow: 0 0 9px #f0cb35;
+  outline: 0.5px solid #f0cb35;
   transition: 0.1s ease;
   color: black;
 }
@@ -213,32 +207,32 @@ header {
 }
 
 .game-buttons i {
-  font-size: 3.5em;
+  font-size: 4em;
   display: flex;
-  margin: 40px 50px;
+  text-align: center;
+  align-items: center;
+  margin: 30px 30px;
 }
 
 .game-buttons button {
   background-color: #edf0f1;
-  border: 5px solid #edf0f1;
+  border: 2px solid #232526;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
   transition: 0.1s ease;
-  border-radius: 15px;
+  border-radius: 100px;
   cursor: pointer;
-  margin: 10px 10px;
+  margin: 5px 5px;
 }
 
 .game-buttons span {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.3rem;
-  position: relative;
-  bottom: 15px;
 }
 
 .btn-grey:hover {
-  border: 5px solid grey;
+  border: 2px solid grey;
   box-shadow: 0 2px 2px grey;
   color: grey;
 }
@@ -248,7 +242,7 @@ header {
 }
 
 .btn-green:hover {
-  border: 5px solid limegreen;
+  border: 2px solid limegreen;
   box-shadow: 0 2px 2px limegreen;
   color: limegreen;
 }
@@ -258,7 +252,7 @@ header {
 }
 
 .btn-blue:hover {
-  border: 5px solid lightskyblue;
+  border: 2px solid lightskyblue;
   box-shadow: 0 2px 2px lightskyblue;
   color: lightskyblue;
 }
@@ -268,7 +262,7 @@ header {
 }
 
 .btn-red:hover {
-  border: 5px solid red;
+  border: 2px solid red;
   box-shadow: 0 2px 2px red;
   color: red;
 }
@@ -278,7 +272,7 @@ header {
 }
 
 .btn-orange:hover {
-  border: 5px solid orange;
+  border: 2px solid orange;
   box-shadow: 0 2px 2px orange;
   color: orange;
 }
@@ -311,7 +305,7 @@ header {
 
 /***** Player vs Computer Area + Scores ******/
 
-.center-area {
+.scores-container {
   display: flex;
   flex-flow: wrap;
   align-items: center;
@@ -321,10 +315,10 @@ header {
   gap: 10px;
 }
 
-.center-area span {
+.scores-container span {
   font-size: 35px;
   font-weight: bolder;
-  color: #F0CB35;
+  color: #f0cb35;
 }
 
 .player-area {
@@ -375,9 +369,10 @@ header {
 .opt-btn-pos {
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin: 10px;
 }
 
 .option-buttons {
@@ -389,7 +384,7 @@ header {
   height: 50px;
   border-radius: 25px;
   margin: 5px;
-  background-color: #F0CB35;
+  background-color: #f0cb35;
   font-weight: 500;
   color: black;
   border-style: none;
@@ -397,8 +392,8 @@ header {
 
 .option-buttons:hover {
   background-color: #edf0f1;
-  box-shadow: 0 0 9px #F0CB35;
-  outline: 0.5px solid #F0CB35;
+  box-shadow: 0 0 9px #f0cb35;
+  outline: 0.5px solid #f0cb35;
   transition: 0.1s ease;
   color: black;
 }
@@ -414,7 +409,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px 10px 50px;
+  padding: 10px 10px 30px;
   margin: 0 auto;
 }
 
@@ -425,7 +420,7 @@ header {
   justify-content: center;
   border-radius: 25px;
   font-size: 1.3rem;
-  height: 50px;
+  padding: 10px;
   width: 180px;
 }
 
@@ -434,7 +429,6 @@ header {
   text-align: center;
   align-items: center;
   justify-content: center;
-
 }
 
 /**** Footer for Copyrights *******/
@@ -442,9 +436,7 @@ header {
 .social {
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  background-color: #283048;
+
   width: 100%;
 }
 
@@ -454,370 +446,55 @@ header {
   margin: 10px;
 }
 
+.game-container {
+  background-color: #49a09d;
+}
+
 /* ------------------------------------------------ */
 
 /* Media Queries for Mobile Devices */
 
-@media screen and (max-width: 920px) {
+
+@media screen and (max-width: 390px) and (max-height:844px) {
+
   header {
-    position: absolute;
-    top: 0;
+    font-size: 1.5em;
   }
 
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .player-area,
-  .computer-area {
-    height: 200px;
-    width: 280px;
-  }
-
-  .game-buttons i {
-    font-size: 2rem;
-  }
-
-}
-
-@media screen and (max-width: 820px) {
-  .center-area {
-    display: flex;
+  .scores-container {
     flex-direction: row;
   }
 
-  .modal-content {
-    font-size: 25px;
+  .player-area, .computer-area {
+    width:150px;
+    height:190px;
   }
 
   .game-buttons i {
-    font-size: 4rem;
-    margin: 8px 8px;
+    font-size: 2em;
+    margin: 15px 15px;
   }
-
-  .game-buttons span {
-    display: none;
-  }
-
-}
-
-.modal .modal-content {
-  width: 400px;
-}
-
-.modal-content p {
-  font-size: 25px;
-}
-
-@media screen and (max-width: 640px) {
-  .game-buttons i {
-    font-size: 4em;
-    display: flex;
-    margin: 5px 5px;
-  }
-
-  .game-buttons span {
-    display: none;
-  }
-
-  .modal-content {
-    font-size: 25px;
-  }
-
-  #resultMessage {
-    padding: 10px 0;
-  }
-
-  #playerPickChoice {
-    display: flex;
-    position: relative;
-    top: 0;
-  }
-
-  #comPickChoice {
-    display: flex;
-    position: relative;
-    top: 0;
-  }
-
-  .player-area,
-  .computer-area {
-    font-size: 15px;
-    height: 170px;
-    width: 240px;
-  }
-
-  .scores span {
-    font-size: 20px;
-  }
-
-  .modal-content {
-    font-size: 22px;
-  }
-
-  @media screen and (max-width: 560px) {
-    header {
-      position: absolute;
-      top: 0;
-      font-size: 1.7rem;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal .modal-content {
-      width: 350px;
-      height: 550px;
-    }
-
-    .player-area,
-    .computer-area {
-      font-size: 14px;
-      width: 200px;
-      height: 180px;
-    }
-
-    .option-buttons {
-      font-size: 20px;
-    }
-
-    .game-buttons i {
-      font-size: 3.5em;
-      display: flex;
-      margin: 4px 4px;
-    }
-
-    .modal-content {
-      font-size: 25px;
-    }
-
-    .center-area {
-      flex-direction: row;
-    }
-
-    .scores span {
-      font-size: 20px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    header {
-      font-size: 2rem;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal .modal-content {
-      width: 260px;
-      height: 400px;
-    }
-
-    .gameResultContent {
-      width: 330px;
-    }
-
-    .modal-content p {
-      font-size: 16px;
-    }
-
-    .center-area {
-      flex-direction: row;
-    }
-
-    .player-area,
-    .computer-area {
-      width: 180px;
-      height: 160px;
-    }
-
-    #resultMessage {
-      margin: 0;
-    }
-
-    #resultMessage span {
-      font-size: 1rem;
-      width: 125px;
-      height: 40px;
-    }
-
-    .game-buttons {
-      margin: 0;
-    }
-
-    .game-buttons i {
-      margin: 5px 5px;
-      font-size: 40px;
-    }
-
-    .opt-btn-pos {
-      margin: 0;
-    }
-
-    .option-buttons {
-      font-size: 20px;
-      width: 85px;
-      margin: 20px 10px;
-    }
-
-  }
-
-
-  @media screen and (max-width: 440px) {
-    header {
-      font-size: 1.2rem;
-    }
-
-    .center-area {
-      flex-direction: column;
-    }
-
-    .player-area,
-    .computer-area {
-      height: 130px;
-    }
-
-    .game-buttons i {
-      font-size: 1.7rem;
-    }
-
-    .opt-btn-pos {
-      flex-direction: row;
-      flex-flow: wrap;
-    }
-
-    .option-buttons {
-      width: 70px;
-      height: 30px;
-      font-size: 1rem;
-      margin: 2px;
-    }
-  }
-
-  @media screen and (max-width: 300px) {
-    .game-buttons {
-      margin: 10px;
-    }
   
-    .game-buttons i {
-      font-size: 1.5rem;
-    }
-
-    .center-area span {
-      font-size: 20px;
-    }
-
-    .option-buttons {
-      width: 60px;
-      height: 30px;
-      font-size: 1rem;
-    }
-
-    .scores {
-      font-size: 0.7rem;
-    }
-
-    .scores span {
-      font-size: 1rem;
-    }
-
-    .game-buttons button {
-      margin: 3px 3px;
-    }
-
-    .gameResultContent span {
-      font-size: 1.2rem;
-    }
-
-    .gameResultContent {
-      width: 260px;
-      height: 200px;
-    }
-
+  .game-buttons button {
+    margin: 2px 2px;
   }
 
-  /*** For iPhone 4/4s *****/
-  @media 
-    only screen and (min-device-width: 320px) 
-    and (max-device-width: 480px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (device-aspect-ratio: 2/3)
-{
+  .option-buttons {
+    width:85px;
+    height: 35px;
+  }
+}
 
-  .game-buttons i {
-    font-size: 1rem;
+@media screen and (max-width: 430px) and (max-height: 930px) {
+  header {
+    font-size: 2em;
   }
 
-  .center-area {
+  .scores-container {
     flex-direction: row;
   }
 
-  .player-area, .computer-area{
-    height: 140px;
-    width: 120px;
-    font-size: 0.5rem;
+  .player-area, .computer-area {
+    width: 180px;
   }
-  
-
-  .center-area span {
-    font-size: 17px;
-  }
-
-  .gameResultContent {
-    width: 280px;
-    height: 200px;
-  }
-
-  .close-btn-result {
-    width: 140px;
-    height: 120px;
-  }
-
-}
-
-/***** iPhone5+ ******/ 
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min--moz-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5)
-  {
-
-    .game-buttons i {
-      font-size: 1.5rem;
-    }
-
-    .game-buttons button {
-      margin: 7px 7px;
-    }
-  
-    .center-area {
-      flex-direction: row;
-    }
-
-    .center-area span {
-      font-size: 15px;
-    }
-
-    .player-area, .computer-area {
-      width: 100px;
-      font-size: 0.6rem;
-    }
-
-    .gameResultContent {
-      width: 280px;
-      height: 200px;
-    }
-
-  }
-
-
-
 }
