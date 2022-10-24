@@ -3,6 +3,21 @@
 Here I have created a Rock Paper Scissors Lizard Spock game which originated from the great TV show called The Big Bang Theory.
 It consists of your basic Rock Paper Scissors Rules along with two more choices for a bit more of a twist into the game. Here you get a chance to battle it out against the computer in a best of 10 at which whoever gets to 10 first wins!.
 
+![ScreenShot](./assets/readmeImages/amiResponsiveImage.png)
+
+The live version of the game is available for you to try here : <a href="https://kryspinm97.github.io/Rock-Paper-Scissors-Lizard-Spock-Game/">Rock,Paper,Scissors,Lizard and Spock!</a>
+
+# ReadMe Contents # 
+
+* ## [UX](#ux)
+* ## [Testing](#testing)
+* ## [Validator](#validator-testing)
+* ## [Deployment](#deployment)
+* ## [Credits](#credits)
+
+
+
+
 # UX #
 
 ## User Stories ##
@@ -39,7 +54,7 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 
 ## 3. Structure ##
 
-* Header consisting of the Game Name , identifying it to the user of what it is about.
+* Header consisting of the game name , identifying it to the user of what it is about.
 * Player and Computer central score area, that holds the score count for both the Player and Computer, which increments while winning / losing rounds.
 * An Element that comes up with a round result message if you have won or lost or it was a draw. 
 * A layout of interactive buttons that display the game options of (Rock, Paper, Scissors, Lizard and Spock).
@@ -86,6 +101,10 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 * ### CSS ###
   * No errors found during the Jigsaw validator for CSS documents
 
+  * The document validated at CSS level 3 + SVG
+
+  ![ScreenShot](./assets/readmeImages/W3CValidator1.png) ![ScreenShot](./assets/readmeImages/W3CValidator2.png)
+
 * ### JS ###
   * No errors found during the JSHint validator for JavaScript code
     
@@ -107,13 +126,15 @@ It consists of your basic Rock Paper Scissors Rules along with two more choices 
 
 # Credits #
 
-### Media ###
-
-For the duration of this project I have used resources such as : 
-
-* <a href="https://google.com">Google</a>
-* <a href="https://google.com">AMI Responsive</a>
-* <a href="https://google.com">Google</a>
-* <a href="https://google.com">Google</a>
-
 ### Coding ###
+
+* <a href="https://google.com">Google</a>
+* <a href="https://ui.dev/amiresponsive">AMI Responsive</a>
+* <a href="https://stackoverflow.com/">Stack Overflow</a>
+* <a href="https://youtube.com">YouTube</a>
+* <a href="https://w3schools.com">W3Schools</a>
+* <a href="https://https://codeinstitute.net/">Code Institute</a>
+
+* All those resources were very valuable in the progression of my project whenever I was stuck at any point in time I refered back to the course material as well as the online resources.
+
+I would like to thank Code Institute for supplying me with the necessary guidance for this project and also my mentor Rahul in guiding me in the right direction.
