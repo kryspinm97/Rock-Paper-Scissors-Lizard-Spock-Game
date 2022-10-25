@@ -58,11 +58,11 @@ btnPlay.addEventListener('click', event => {
   document.getElementById("scissor").disabled = false;
   document.getElementById("lizard").disabled = false;
   document.getElementById("spock").disabled = false;
-})
+});
 
 btnReset.addEventListener('click', event => {
   document.location.reload(true);
-})
+});
 
 /**---------------------------------------------------------- */
 
@@ -129,7 +129,7 @@ function gameResult(player1, Comp) {
   pickPlayer.innerHTML = (`You picked ${playerPick}`);
   pickCom.innerHTML = (`Com picked ${compPick}`);
   bestOfTen();
-};
+}
 
 /**
  * This function toggles the Modal of Rules Active and Closes.

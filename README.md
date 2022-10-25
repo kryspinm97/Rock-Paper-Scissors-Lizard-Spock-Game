@@ -15,9 +15,6 @@ The live version of the game is available for you to try here : <a href="https:/
 * ## [Deployment](#deployment)
 * ## [Credits](#credits)
 
-
-
-
 # UX #
 
 ## User Stories ##
@@ -92,7 +89,6 @@ The live version of the game is available for you to try here : <a href="https:/
  * Have also tested the game on different devices using the DevTools Device list working good.
  * Buttons reposition themselves along with the computer and player score as screen gets smaller
 
-
 # Validator Testing #
 
 * ### HTML ###
@@ -107,6 +103,7 @@ The live version of the game is available for you to try here : <a href="https:/
 
 * ### JS ###
   * No errors found during the JSHint validator for JavaScript code
+  * Only recieving a warning about Two unused variables of - toggleModal and playAgain as those are onclick functions that are defined in the HTML.
     
 * ### Accessibility ###
 
@@ -136,5 +133,7 @@ The live version of the game is available for you to try here : <a href="https:/
 * <a href="https://https://codeinstitute.net/">Code Institute</a>
 
 * All those resources were very valuable in the progression of my project whenever I was stuck at any point in time I refered back to the course material as well as the online resources.
+
+* I have used Youtube as a guide on how to create pop up modals as I've had no previous experience in doing them. These have definitely added responsiveness and interaction within my game and were a great addition.
 
 I would like to thank Code Institute for supplying me with the necessary guidance for this project and also my mentor Rahul in guiding me in the right direction.
