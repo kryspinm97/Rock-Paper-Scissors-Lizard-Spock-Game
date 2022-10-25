@@ -9,11 +9,11 @@ The live version of the game is available for you to try here : <a href="https:/
 
 # ReadMe Contents # 
 
-* ## [UX](#ux)
-* ## [Testing](#testing)
+* ## [UX](#ux-1)
+* ## [Testing](#testing-1)
 * ## [Validator](#validator-testing)
-* ## [Deployment](#deployment)
-* ## [Credits](#credits)
+* ## [Deployment](#deployment-1)
+* ## [Credits](#credits-1)
 
 # UX #
 
@@ -137,3 +137,5 @@ The live version of the game is available for you to try here : <a href="https:/
 * I have used Youtube as a guide on how to create pop up modals as I've had no previous experience in doing them. These have definitely added responsiveness and interaction within my game and were a great addition.
 
 I would like to thank Code Institute for supplying me with the necessary guidance for this project and also my mentor Rahul in guiding me in the right direction.
+
+[def]: #credits
